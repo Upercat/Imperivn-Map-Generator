@@ -1,0 +1,33 @@
+{
+  "rms": {
+    "template": "data/RandomMap/Continent.rm.xml",
+    "map_size": 16384,
+    "teams_by_slot_0x28": [
+      0,
+      0,
+      255,
+      255,
+      255,
+      255,
+      255,
+      255
+    ],
+    "races_by_slot_0x30": [
+      4,
+      4,
+      255,
+      255,
+      255,
+      255,
+      255,
+      255
+    ],
+    "flags_0x38_0x64": {
+      "0x50": 1,
+      "0x54": 1,
+      "0x5C": 1,
+      "0x64": 1
+    }
+  },
+  "rng_primary_session_begin": "0xBAADF00D"
+}

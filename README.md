@@ -52,5 +52,28 @@ non-ASCII characters. This coverage does not test every seed or replace native-g
 
 Report problems through this repository's Issues with tool/Windows/game version and, for
 generation, template, size, player count, civilisation and seed. Avoid attaching private player
-data unnecessarily. Distribution/license terms and source availability remain the author's
-decision; no open-source license has been assigned by this initial preparation.
+data unnecessarily. Application and generator source code are included. Distribution/license terms remain the
+author's decision; no open-source license has been assigned by this initial preparation.
+
+## Build from source
+
+The application lives in `src/`; the included header dependency closure of the modular generator
+lives in `vendor/iberivm/src/`. No separate private repository or submodule is required.
+Use a Visual Studio **x64 Native Tools** prompt with C++20 tools, a Windows SDK and CMake 3.20+:
+
+```bat
+cmake -S . -B build -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+ctest --test-dir build --output-on-failure
+```
+
+This runs the standalone checks without needing game files. Python 3 enables the executable
+strings check. Integration checks are opt-in: set `MAPX_GAME_ROOT` to your own installation.
+Set `MAPX_REPLAY_FIXTURE` to a replay for the UI suite, or `MAPX_SAVE_FIXTURE_A` and
+`MAPX_SAVE_FIXTURE_B` to verified/mismatch saves for optimization equivalence. Frozen external
+fixture lists are optional via `MAPX_FIXTURE_BASE` and `MAPX_FIXTURE_MANIFEST_DIR`; private
+fixture file names and all actual game/replay/save data are deliberately excluded from Git.
+
+The compiler uses a static C++ runtime. The application is built as `build/imperivm-map-extractor.exe`.
+Console probes, tests and benchmarks are developer tools and are not in the downloadable ZIP.
+Generator phase contracts: [generation architecture](docs/GENERATION.md).
