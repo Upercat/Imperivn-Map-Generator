@@ -1,0 +1,17 @@
+# Local preferences, build outputs and original game data
+*.ini
+*.exe
+*.dll
+*.pdb
+*.obj
+*.BFHP
+*.bfhp
+*.pak
+*.dmo
+*.snr
+*.adv
+build/
+out/
+scratch/
+.vs/
+__pycache__/

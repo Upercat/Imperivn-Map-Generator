@@ -1,0 +1,19 @@
+0.2.3 beta candidate
+- Complete-file staging and checked flush before publishing exported maps.
+- Non-replacing, bounded unique-name installation, including concurrent writers.
+- Per-user preferences, with compatibility reads for older portable settings.
+- Exact-size Unicode Steam path conversion and invalid UTF-8 refusal.
+- Early validation of oversized/corrupt input size fields and overlapping/empty data spans.
+- Validate every template bitmap before offering a catalogue entry; omit incompatible Tournament.
+- More room for multi-line status and installation hints.
+- Updated executable/manifest versions, user documentation and clean packaging.
+- Additional failure-oriented output, input, startup and catalogue regression checks.
+
+0.2.2
+- Double-click or Enter opens a map across the window; Back to grid or Esc restores the gallery.
+
+0.2.1
+- Resizable/maximizable window and high-resolution adaptive previews.
+
+0.2.0
+- Recover and Generate tabs with a selectable, cancellable 3x3 deterministic map gallery.

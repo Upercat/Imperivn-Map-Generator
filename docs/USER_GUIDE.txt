@@ -1,0 +1,53 @@
+IMPERIVM MAP EXTRACTOR 0.2.3 - BETA CANDIDATE
+
+Requirements
+Windows 10 or 11, 64-bit. A separately installed, unmodified Imperivm HD game is required.
+The executable uses the static C++ runtime; no Python, compiler or separate runtime is needed.
+Extract the ZIP before opening the executable. The application does not require elevation.
+
+Recover maps
+Choose the game folder using Change if it is not detected. In Recover maps, drop a .dmo replay
+or .snr saved game, or click the drop area to choose it. Review the map and verification status.
+Save .BFHP exports to a location you choose. Install in the game adds a uniquely named file
+under the chosen game's Scenarios folder. Existing scenario files are not overwritten.
+If that folder is not writable, save elsewhere and copy the exported map yourself.
+
+Generate maps
+In Generate maps, choose template, size, player count and civilisation. Enter a hexadecimal
+base seed or choose Random seed, then Generate 9 maps. Click a completed map to select it.
+Double-click (or press Enter on a focused card) to enlarge it. Back to grid or Esc restores
+the same gallery and selection. The window can be resized and maximized.
+Next 9 maps advances the base seed by nine using the same controls. Stop retains finished maps.
+New batches replace the gallery; changing tabs retains recovery and gallery separately.
+Save or install the selected map after generation stops. Saving is explicit, never automatic.
+
+Reproducibility and limits
+Each card uses base seed + zero-based card index, with unsigned 32-bit wrapping. Reusing the
+same seed, settings and installation reproduces the same map. The current generator creates
+free-for-all spring maps; a fixed civilisation applies to all active players, or random chooses
+independently. Unsupported sizes/player counts are omitted using installed template limits.
+Tournament is not offered: its template bitmap format is unsupported by this generator.
+Only random-map replays/saves from the supported HD build are accepted. Other builds, campaigns,
+predefined maps and incompatible modified installations may be refused. A replay does not store
+terrain for verification; an unverified or mismatching result is explicitly identified.
+The number shown on a card identifies it within that batch; the seed identifies its generation.
+In the game, choose Skirmish, then a predefined map. Changing its size can replace that selection.
+Multiplayer and clean-machine/native-game acceptance remain pending for this beta candidate.
+
+Preferences and files
+Settings are stored in %LOCALAPPDATA%\ImperivmMapExtractor\settings.ini. Older portable settings
+beside the executable are read for compatibility. The ZIP contains no saved preferences or game
+data. Generation/recovery read your installation; saving and installing write only when requested.
+Closing the application discards in-memory previews and unsaved maps. No updater is included.
+The executable is unsigned. No code-signing certificate is bundled.
+
+Reporting a problem
+Record the tool version, Windows version, game build and whether the installation is modified.
+For generation, include template, size, player count, civilisation and seed. For recovery, include
+the type of source file and the displayed result. Preserve the original replay/save separately.
+Do not publish private replay/player data unnecessarily. No support address is configured yet.
+
+Publication status
+This archive is a release candidate prepared for evaluation. Distribution/license terms and the
+final publication decision belong to the author and have not been assigned by this audit.
+This utility requires your own installation and contains no game packs or game executable.
